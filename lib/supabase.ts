@@ -2,8 +2,8 @@ import { createClient } from '@supabase/supabase-js'
 
 // کلیدها از Vercel Environment Variables خوانده می‌شوند
 // هرگز اینجا کلید ننویسید — فقط در Vercel Dashboard وارد کنید
-const SUPABASE_URL      = import.meta.env.VITE_SUPABASE_URL as string
-const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY as string
+const supabaseUrl = process.env.VITE_SUPABASE_URL as string;
+const supabaseAnonKey = process.env.VITE_SUPABASE_ANON_KEY as string;
 
 export const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
   auth: {
